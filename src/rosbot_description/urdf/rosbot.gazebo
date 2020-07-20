@@ -417,4 +417,37 @@
     </sensor>
   </gazebo>
 
+  <!-- GPS Sensor -->
+  <gazebo>
+    <plugin name="gps_ublox_sim" filename="libhector_gazebo_ros_gps.so">
+      <alwaysOn>1</alwaysOn>
+      <updateRate>1.0</updateRate>
+      <bodyName>gps_link</bodyName>
+      <!-- added to try to remove complaint about /world to base_link tf -->
+      <frameName>gps_link</frameName>
+      <frameId>gps_link</frameId>
+      <!-- probably have to change this go /gps/fix -->
+      <topicName>gps/fix</topicName>
+      <!-- probably have to change this to /gps/fix_velocity -->
+      <velocityTopicName>gps/fix_velocity</velocityTopicName>
+      <!-- let's try changing the reference lat and lon to the location of the office -->
+      <referenceLatitude>47.625750</referenceLatitude>
+      <referenceLongitude>-122.156000</referenceLongitude>
+      <!-- change these to idealized noiseless values -->
+      <!-- it looks like all of the drifting around was due to the noise on the GPS -->
+      <!-- standard deviation of the position drift error -->
+      <!-- <drift>5.0 5.0 5.0</drift> -->
+      <drift>0 0 0</drift>
+      <!-- standard deviation of the additive gaussian noise added to the position -->
+      <!-- <gaussianNoise>0.1 0.1 0.1</gaussianNoise> -->
+      <gaussianNoise>0 0 0</gaussianNoise>
+      <!-- standard deviation of velocity error -->
+      <!-- <velocityDrift>0.01 0.01 0.01</velocityDrift> -->'
+      <velocityDrift>0 0 0</velocityDrift>
+      <!-- standard deviation of the additive gaussian noise added to velocity -->
+      <!-- <velocityGaussianNoise>0.1 0.1 0.1</velocityGaussianNoise> -->
+      <velocityGaussianNoise>0 0 0</velocityGaussianNoise>
+    </plugin>
+  </gazebo>
+
 </robot>

@@ -381,4 +381,62 @@
   </joint>
   <link name="range_rr"></link>
 
+  <!-- GPS receiver -->
+  <joint name="gps_joint" type="fixed">
+    <axis xyz="0 0 0" />
+    <origin xyz="-0.045 0 0.18" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="gps_link"/>
+  </joint>
+
+  <link name="gps_link">
+    <collision>
+      <origin xyz="0.02 0 0" rpy="0 0 0"/>
+      <geometry>0
+        <box size="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+ 
+    <visual>
+      <geometry>
+        <cylinder length="0.015" radius="0.025"/>
+      </geometry>
+    </visual>
+
+    <inertial>
+      <mass value="1e-5" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+    </inertial>
+  </link>
+
+  <!-- why tf do I have to add the imu_link? -->
+  <!-- NOTE: this is just my present best guess at where the imu is -->
+  <!-- it looks like they have this shit in one of their launch files?  why.... -->
+  <!-- let's take the actual values they have in the rosbot_ekf/launch/all.launch -->
+  <!-- "0 0 0.02 0 0 0 base_link imu_link 100" -->
+  <!-- IMU -->
+  <joint name="imu_joint" type="fixed">
+    <axis xyz="0 0 0" />
+    <origin xyz="0 0 0.02" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="imu_link"/>
+  </joint>
+
+  <link name="imu_link">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>0
+        <box size="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+ 
+    <inertial>
+      <mass value="1e-5" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+    </inertial>
+  </link>
+
+
 </robot>
