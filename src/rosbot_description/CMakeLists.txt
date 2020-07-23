@@ -12,6 +12,7 @@ catkin_package(
 
 catkin_install_python(PROGRAMS
   scripts/rosbot_description/serial_bridge.py
+	scripts/rosbot_description/tf_rebroadcaster.py
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/rosbot_description
 )
 

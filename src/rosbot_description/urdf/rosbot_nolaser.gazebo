@@ -116,8 +116,8 @@
     achieving "+-30mm" accuracy at range < 10m.  A mean of 0.0m and
     stddev of 0.01m will put 99.7% of samples within 0.03m of the true
     reading. -->
-
   <!-- RpLidar A2 using GPU -->
+  <!--
   <gazebo reference="laser">
     <sensor type="gpu_ray" name="head_rplidar_sensor">
       <pose>0 0 0.06 0 0 0</pose>
@@ -148,7 +148,8 @@
         <frameName>laser</frameName>
       </plugin>
     </sensor>
-  </gazebo>
+  </gazebo>  
+  -->
 
   <!-- RpLidar A3 using GPU -->
   <!-- <gazebo reference="laser">
@@ -437,16 +438,16 @@
       <!-- it looks like all of the drifting around was due to the noise on the GPS -->
       <!-- standard deviation of the position drift error -->
       <!-- <drift>5.0 5.0 5.0</drift> -->
-      <drift>0 0 0</drift>
+      <drift>0.001 0.001 0.001</drift>
       <!-- standard deviation of the additive gaussian noise added to the position -->
       <!-- <gaussianNoise>0.1 0.1 0.1</gaussianNoise> -->
-      <gaussianNoise>0 0 0</gaussianNoise>
+      <gaussianNoise>0.001 0.001 0.001</gaussianNoise>
       <!-- standard deviation of velocity error -->
       <!-- <velocityDrift>0.01 0.01 0.01</velocityDrift> -->'
-      <velocityDrift>0 0 0</velocityDrift>
+      <velocityDrift>0.001 0.001 0.001</velocityDrift>
       <!-- standard deviation of the additive gaussian noise added to velocity -->
       <!-- <velocityGaussianNoise>0.1 0.1 0.1</velocityGaussianNoise> -->
-      <velocityGaussianNoise>0 0 0</velocityGaussianNoise>
+      <velocityGaussianNoise>0.001 0.001 0.001</velocityGaussianNoise>
     </plugin>
   </gazebo>
 
