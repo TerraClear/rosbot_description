@@ -432,22 +432,22 @@
       <!-- probably have to change this to /gps/fix_velocity -->
       <velocityTopicName>gps/fix_velocity</velocityTopicName>
       <!-- let's try changing the reference lat and lon to the location of the office -->
-      <referenceLatitude>47.625750</referenceLatitude>
-      <referenceLongitude>-122.156000</referenceLongitude>
+      <referenceLatitude>47.6255335</referenceLatitude>
+      <referenceLongitude>-122.1557401</referenceLongitude>
       <!-- change these to idealized noiseless values -->
       <!-- it looks like all of the drifting around was due to the noise on the GPS -->
       <!-- standard deviation of the position drift error -->
       <!-- <drift>5.0 5.0 5.0</drift> -->
-      <drift>0.001 0.001 0.001</drift>
+      <drift>0.0 0.0 0.0</drift>
       <!-- standard deviation of the additive gaussian noise added to the position -->
       <!-- <gaussianNoise>0.1 0.1 0.1</gaussianNoise> -->
-      <gaussianNoise>0.001 0.001 0.001</gaussianNoise>
+      <gaussianNoise>0.0 0.0 0.0</gaussianNoise>
       <!-- standard deviation of velocity error -->
       <!-- <velocityDrift>0.01 0.01 0.01</velocityDrift> -->'
-      <velocityDrift>0.001 0.001 0.001</velocityDrift>
+      <velocityDrift>0.0 0.0 0.0</velocityDrift>
       <!-- standard deviation of the additive gaussian noise added to velocity -->
       <!-- <velocityGaussianNoise>0.1 0.1 0.1</velocityGaussianNoise> -->
-      <velocityGaussianNoise>0.001 0.001 0.001</velocityGaussianNoise>
+      <velocityGaussianNoise>0.0 0.0 0.0</velocityGaussianNoise>
     </plugin>
   </gazebo>
 
