@@ -15,4 +15,4 @@ TrajectoryPlannerROS:
  occdist_scale:  0.01
  pdist_scale: 0.4
  gdist_scale: 0.2
- sim_time: 15.0
+ sim_time: 5.0
