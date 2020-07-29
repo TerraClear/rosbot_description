@@ -1,12 +1,20 @@
 global_costmap:
-  update_frequency: 0.5
+  update_frequency: 0.06
   publish_frequency: 1.5
   transform_tolerance: 0.5
-  width: 30
-  height: 30
-  origin_x: -15
-  origin_y: -15
+  width: 60
+  height: 60
+  origin_x: -30
+  origin_y: -30
   static_map: true
   rolling_window: true
   inflation_radius: 2.5
   resolution: 0.01
+
+  # specify that we want to use A* global planner
+  use_dijkstra: false
+  # these are defaults but put them in for future ease of use
+  lethal_cost: 253
+  neutral_cost: 50
+  cost_factor: 3.0
+  publish_potential: true

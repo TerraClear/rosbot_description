@@ -1,0 +1,27 @@
+#base_global_planner: navfn/NavfnROS
+#base_local_planner: base_local_planner/TrajectoryPlannerROS
+
+#recovery_behaviors: [{
+#    name: conservative_reset,
+#    type: clear_costmap_recovery/ClearCostmapRecovery
+#  }, {
+#    name: rotate_recovery1,
+#    type: rotate_recovery/RotateRecovery
+#  }, {
+#    name: aggressive_reset,
+#    type: clear_costmap_recovery/ClearCostmapRecovery
+#  }, {
+#    name: rotate_recovery2,
+#    type: rotate_recovery/RotateRecovery
+#  }]
+
+planner_frequency:          0     # Global plan updates on new goal or path blocked only
+controller_frequency:       20
+planner_patience:           5.0    # default
+controller_patience:        15.0   # default
+conservative_reset_dist:    3.0    # default
+recovery_behavior_enabled:  true   # default
+clearing_rotation_allowed:  true   # default
+shutdown_costmaps:          false  # default
+oscillation_timeout:        0.0    # default, infinite timeout
+oscillation_distance:       0.5    # default, distance in meters
