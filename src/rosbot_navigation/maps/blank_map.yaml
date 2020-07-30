@@ -1,4 +1,5 @@
-image: /home/ericvictorson/vcs/data/workspace/src/rosbot_description/src/rosbot_navigation/maps/blank_map.pgm
+#image: /home/ericvictorson/vcs/data/workspace/src/rosbot_description/src/rosbot_navigation/maps/blank_map.pgm
+image: blank_map.pgm
 resolution: 0.1  # meters / pixel
 origin: [-30.0, -30.0, 0.0]
 occupied_thresh: 0.65
